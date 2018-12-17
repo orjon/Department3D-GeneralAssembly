@@ -19,8 +19,17 @@ Author: Your Name
 
 * {
 	box-sizing: border-box;
-
    }
+
+ /*html {
+ 	overflow: scroll;
+ }
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}*/
 
 /*img {
 	max-width:100%;
@@ -136,7 +145,9 @@ nav li a{
     /*transition: 0.1s;*/
 }
 
-
+.site-content {
+	margin-bottom: 18px;
+}
 /*.button:active{
 	color: white;
 	text-shadow:  0px 0px 3px white;
@@ -198,14 +209,24 @@ main {
 
 .product {
 	transition: 0.5s;
-	background-image: url('../images/hero/product_sub.jpg');
+	background-image: url('../images/hero/3ddesign_sub.jpg');
 }
 
 .product:hover {
 	transition: 0.1s;
-	background-image: url('../images/hero/printing.jpg');
+	background-image: url('../images/hero/3ddesign.jpg');
 }
 
+
+.marketing {
+	transition: 0.5s;
+	background-image: url('../images/hero/product_sub.jpg');
+}
+
+.marketing:hover {
+	transition: 0.1s;
+	background-image: url('../images/hero/product.jpg');
+}
 
 .printing {
 	transition: 0.5s;
