@@ -1,0 +1,301 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+*/
+
+/******************************************
+/* COLOURS
+/*******************************************/
+
+/* add a list of colours used in the project */
+:root {
+	--border: 0px;
+};
+
+/******************************************
+/* SENSIBLE DEFAULTS                   
+/*******************************************/
+
+* {
+	box-sizing: border-box;
+
+   }
+
+/*img {
+	max-width:100%;
+}*/
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+/* add type styles here */
+body {
+	font-family:'Roboto', 'Helvetica', sans-serif;
+	font-weight:300;
+	background-color: #424242;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0px;
+    font-weight: 300;
+	color: #fff;
+	font-size: 30px;
+    letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+h2 {
+	margin: 0px;
+	font-weight: 300;
+	font-size: 20px;
+}
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+.site-container {
+	position: relative;
+	margin: 0 auto;
+}
+
+
+
+header {
+	border: var(--border) solid blue;
+	background-color: rgba(50,50,50,1);
+	position: fixed;  /* Prevents header scrolling off top of page */
+	z-index: 10;
+	height: 70px;
+	width:100%;
+}
+
+
+footer {
+	float:right;
+	border: var(--border) solid blue;
+    background-color: rgba(50,50,50,1);
+    color: rgba(100,100,100,1);
+    font-size: 12px;
+	position: fixed;
+	text-align: right;
+	bottom: 0px;
+	height: 18px;
+	width:100%;
+    padding-top: 6px;
+    margin-left: -6px;
+    padding-right: 10px;
+}
+
+#logo {
+    border: var(--border) solid grey;
+    margin: 14px; 
+	height: 50px;
+
+} 
+
+nav {
+	border: var(--border) solid red;
+	float:right;
+	margin-top: 25px;
+	margin-right: 10px;
+
+}
+
+nav ul{
+	padding: 0px;
+}
+
+nav li{
+	border: var(--border) solid blue;
+	display:inline-block;
+}
+
+nav li a{
+	border: var(--border) solid cyan;
+	margin: 0px 5px;
+	text-transform: uppercase;
+}
+
+.button {
+	color: rgb(255,255,255,0.75); /* White @75% */
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+.button:hover {
+	color: rgb(255,255,255,1); /* White @100% */
+    text-shadow:  0px 0px 3px rgb(0,0,0,0.75); /* Glow White @75% */
+    /*transition: 0.1s;*/
+}
+
+
+/*.button:active{
+	color: white;
+	text-shadow:  0px 0px 3px white;
+    border: 1px solid #ccc;
+}*/
+
+
+
+main {
+	border: var(--border) solid green;
+    position: relative;
+    top: 70px;
+    	text-decoration: none;
+}
+
+.hero {
+	border: var(--border) solid orange;
+	color: rgba(255,255,255,1);
+	text-align:right;
+	text-shadow: 0px 0px 10px rgba(0,0,0,1);
+	padding: 275px 15px 15px 0px;
+	background-size:cover;
+	background-position:50% 50%;
+	line-height: 1;
+}
+
+/*.architecture2 {
+	transition: 0.5s;
+	opacity: 0.5;
+	background-image: url('../images/hero/architecture.jpg');
+}
+
+.architecture2:hover{
+	transition: 0.1s;
+	opacity: 1;
+	background-image: url('../images/hero/architecture.jpg');
+}*/
+
+.architecture {
+	transition: 0.5s;
+	background-image: url('../images/hero/architecture_sub.jpg');
+}
+
+.architecture:hover{
+	transition: 0.1s;
+	background-image: url('../images/hero/architecture.jpg');
+}
+
+.events {
+	transition: 0.5s;
+	background-image: url('../images/hero/events_sub.jpg');
+}
+
+.events:hover {
+	transition: 0.1s;
+	background-image: url('../images/hero/events.jpg');
+}
+
+
+.product {
+	transition: 0.5s;
+	background-image: url('../images/hero/product_sub.jpg');
+}
+
+.product:hover {
+	transition: 0.1s;
+	background-image: url('../images/hero/printing.jpg');
+}
+
+
+.printing {
+	transition: 0.5s;
+	background-image: url('../images/hero/printing_sub.jpg');
+}
+
+.printing:hover {
+	transition: 0.1s;
+	background-image: url('../images/hero/printing.jpg');
+}
+
+
+.show-h2 h2 {
+	opacity: 0;
+}
+
+
+
+@media (max-width: 600px) {
+	header {
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		height: 110px;
+	}
+	#logo {
+	    margin: 14px; 
+	} 
+	nav {
+		float: none;
+		margin-top: -15px;
+		margin-right: 0px;
+	}
+	
+	nav li {
+		display:inline;
+	}
+
+	main {
+		top: 110px;
+	}
+
+	.hero {
+		text-align:center;
+		padding:125px 50px; /* Top&Bottom 160 | Left&Right 50 */
+	}
+	h1 {
+		font-style: bold;
+		text-decoration: bold;
+	}
+
+	h2 {
+		font-size: 0px;
+	}
+
+}
+
+/******************************************
+/* HELPER CLASSES
+/*******************************************/
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+     content: " ";
+     display: table;
+}
+.clearfix:after {
+     clear:both;
+}
+
+.is-hidden {
+     display: none;
+}
+.is-visible {
+     display: block;
+}
+
+
+/******************************************
+/* Reminders                   
+/*******************************************/
+/*
+Postion:
+	Static		default value, all elements are in order as they appear in the document.
+	Relative	relative to its normal position.
+	Absolute	absolutely to its first positioned parent.
+	Fixed		related to the browser window.
+	Sticky		based on the user's scroll position.
+*/
+
+
+
